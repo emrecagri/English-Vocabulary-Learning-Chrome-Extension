@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <select id="categoryFilter">
+      </select>
+    <div>
+      <button id="toggleAddBtn" class="icon-btn" title="Add Word">➕</button>
+      <button id="openOptionsBtn" class="icon-btn" title="Stats">📊</button>
+    </div>
+  </header>
+
+  <div id="addWordForm" class="add-form hidden">
+    <h3 data-i18n="menuAdd" style="margin:0;">Add Word</h3>
+    <input type="text" id="newWord" class="form-input" data-placeholder="inputWord">
+    <input type="text" id="newTr" class="form-input" data-placeholder="inputTr">
+    <input type="text" id="newSentence" class="form-input" data-placeholder="inputSentence">
+    <input type="text" id="newCat" class="form-input" data-placeholder="inputCat" list="catList">
+    <datalist id="catList"></datalist>
+    
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <button id="saveWordBtn" class="btn btn-know" style="flex:1;" data-i18n="btnSave">Save</button>
+      <button id="cancelAddBtn" class="btn btn-ignore" style="flex:1;" data-i18n="btnAddCancel">Cancel</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1 id="wordDisplay" class="word-title">Loading...</h1>
+      <p id="sentenceDisplay" class="sentence">...</p>
+      
+      <div id="translationBox" class="translation-box blur">
+        <h2 id="translationDisplay" style="margin:0; font-weight:500;">...</h2>
+      </div>
+
+      <a href="#" id="dictLink" target="_blank" style="margin-top:20px; display:inline-block; color:var(--primary); text-decoration:none; font-size:0.8rem;">
+        <span data-i18n="dictLink">Dictionary</span> 🔗
+      </a>
+    </div>
+
+    <div class="actions">
+      <button id="btnIgnore" class="btn btn-ignore">
+        <span>🚫</span> <small data-i18n="btnIgnore">Ignore</small>
+      </button>
+      <button id="btnLearn" class="btn btn-learn">
+        <span>🎓</span> <small data-i18n="btnLearn">Learned</small>
+      </button>
+      <button id="btnKnow" class="btn btn-know">
+        <span>👍</span> <small data-i18n="btnKnow">Known</small>
+      </button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span data-i18n="footer">Wordmaster - Loruv.com</span>
+  </div>
+
+  <div id="toast" class="toast">Alert</div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

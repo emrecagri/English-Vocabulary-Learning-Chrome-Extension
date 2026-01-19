@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wordmaster - Reports</title>
+  <link rel="stylesheet" href="style.css">
+  <style> body { width: 100%; height: 100%; background: var(--bg-main); overflow-y: auto; } </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+      <h1 style="margin:0; color:var(--primary);">Wordmaster - Loruv</h1>
+      <button id="btnExport" class="btn btn-learn" style="flex-direction:row; gap:10px;">
+        💾 <span data-i18n="exportExcel" style="font-size:0.9rem; margin:0;">Download Excel</span>
+      </button>
+    </div>
+
+    <h3 data-i18n="statsCategory" style="color:var(--text-muted); margin-bottom:10px;">Category Analysis</h3>
+    <table id="catTable">
+      <thead>
+        <tr>
+          <th data-i18n="colCat">Category</th>
+          <th data-i18n="colCount">Word Count</th>
+          <th data-i18n="colMastered">Mastered (Known)</th>
+        </tr>
+      </thead>
+      <tbody id="catBody"></tbody>
+    </table>
+
+    <h3 style="color:var(--text-muted); margin-top:40px;">All Words</h3>
+    <table id="fullTable">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Reps</th>
+        </tr>
+      </thead>
+      <tbody id="fullBody"></tbody>
+    </table>
+    
+    <div class="footer" style="margin-top:50px;">
+       Wordmaster - Loruv.com
+    </div>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
