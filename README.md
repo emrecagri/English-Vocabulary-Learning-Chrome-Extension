@@ -92,10 +92,10 @@ This project is licensed under the **GNU General Public License v3.0** - see the
 ## Ekran Görüntüleri
 ## Screenshoots
 
-![image](screenshot/1.png)
-![image](screenshot/2.png)
-![image](screenshot/3.png)
-![image](screenshot/4.png)
-![image](screenshot/5.png)
+![image](screenshots/1.png)
+![image](screenshots/2.png)
+![image](screenshots/3.png)
+![image](screenshots/4.png)
+![image](screenshots/5.png)
 
 
